@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Update Genre";
+}
+
+@model Genre
+
+<h1>Zmień Gatunek</h1>
+<a asp-action="Index" class="btn btn-secondary">Powrót</a>
+  
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Zmień</button>
+</form>

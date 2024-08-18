@@ -1,0 +1,83 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+h3 {
+    padding: 0px;
+    font-size: 25px;
+    color: black;
+}
+h3N {
+    padding: 0px;
+    font-size: 25px;
+    clear: both;
+    min-width: 1200px;
+    color: black;
+}
+test {
+    float: left;
+    width: 300px;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0px auto;
+}
+test2 {
+    float: left;
+    width: 800px;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0px auto;
+}
+wat {
+    clear: both;
+    float: left;
+}
+
+menu2 {
+    display: table-cell;
+    vertical-align: bottom;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    float: left;
+}
+
+div#menu2 {
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    float: left;
+}
+
+#menu a:link {
+    color: #ffffff;
+}
+
+#menu a:visited {
+    color: #ffffff;
+}
+
+#menu a:hover {
+    color: #ffccff;
+}
+
+#menu a:active {
+    color: #ffffff;
+}

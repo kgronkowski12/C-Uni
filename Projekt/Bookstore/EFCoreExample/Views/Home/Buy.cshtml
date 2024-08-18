@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Zakup";
+}
+@model Payment
+<h3>Kupujesz książkę "@ViewBag.book.Name" za @ViewBag.book.Price zł.</h3>
+<a asp-action="Index" class="btn btn-secondary">Powrót</a>
+
+<form method="post">
+	<h1>Informacje o kupującym</h1>
+	<div class="form-group">
+		<label asp-for="Name"></label>
+		<input asp-for="Name" class="form-control" />
+		<span asp-validation-for="Name" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Surname"></label>
+		<input asp-for="Surname" class="form-control" />
+		<span asp-validation-for="Surname" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="City"></label>
+		<input asp-for="City" class="form-control" />
+		<span asp-validation-for="City" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Street"></label>
+		<input asp-for="Street" class="form-control" />
+		<span asp-validation-for="Street" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Postal"></label>
+		<input asp-for="Postal" class="form-control" />
+		<span asp-validation-for="Postal" class="text-danger"></span>
+	</div>
+	<h1>Sposób płatności</h1>
+	<div class="form-group">
+		<label asp-for="Card"></label>
+		<input asp-for="Card" class="form-control" />
+		<span asp-validation-for="Card" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Cvv"></label>
+		<input asp-for="Cvv" class="form-control" />
+		<span asp-validation-for="Cvv" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Złóż zamówienie</button>
+</form>

@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<connectedBook>
+
+<link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+
+<h3>@ViewBag.text</h3>
+@foreach (connectedBook emp in Model)
+{
+    <div id="menu2">
+        Nazwa:
+        <a class="" asp-area="" form asp-action="Details" asp-controller="Book" asp-route-id=@emp.book.Id> @emp.book.Name</a><br>
+        Gatunek:
+            <a class="" asp-area="" form asp-action="SearchGenre" asp-controller="Home" asp-route-id=@emp.genre.Id>@emp.genre.Name</a><br>
+        Autor:
+        <a class="" asp-area="" form asp-action="SearchAutor" asp-controller="Home" asp-route-id=@emp.book.AutorId>@emp.autorName</a><br>
+        Cena: @emp.book.Price zł<br>
+        <img class="thumbnail" src="~/img/@emp.book.Id-.png" width="200" height="300"><br>
+        <a class="btn btn-sm btn-primary" asp-action="Buy" asp-route-id="@emp.book.Id">
+            Kup Teraz
+        </a>
+        </div>
+}
+<br /><br /><br /><br />

@@ -1,0 +1,33 @@
+﻿@{
+	ViewData["Title"] = "Details";
+}
+@model connectedBook
+
+<h3><u>@Model.book.Name</u></h3>
+<wat>
+<test><img class="thumbnail" src="//localhost:7018/img/@Model.book.Id-.png" width="200" height="300"></test>
+<test2>
+    <h3N>Informacje o książce:</h3N><br />
+    Nazwa:
+    <a class="" asp-area="" form asp-action="Details" asp-controller="Book" asp-route-id=@Model.book.Id> @Model.book.Name</a><br>
+    Gatunek:
+    <a class="" asp-area="" form asp-action="SearchGenre" asp-controller="Home" asp-route-id=@Model.genre.Id>@Model.genre.Name</a><br>
+    Autor:
+    <a class="" asp-area="" form asp-action="SearchAutor" asp-controller="Home" asp-route-id=@Model.book.AutorId>@Model.autorName</a><br>
+    <h3N>Opis:</h3N><br />
+    @Model.book.Description
+</test2>
+</wat>
+<wat><br />
+    <h3N>Inne książki autorstwa @Model.autorName</h3N></wat>
+<wat>
+@foreach (Book emp in ViewBag.inne)
+{
+    <div id="menu2">
+        Nazwa:
+        <a class="" asp-area="" form asp-action="Details" asp-controller="Book" asp-route-id=@emp.Id> @emp.Name</a><br>
+            <img class="thumbnail" src="~/img/@emp.Id-.png" width="200" height="300"><br>
+    </div>
+}
+</wat>
+<br /><br />

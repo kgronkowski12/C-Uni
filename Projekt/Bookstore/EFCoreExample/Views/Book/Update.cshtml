@@ -1,0 +1,37 @@
+﻿@{
+	ViewData["Title"] = "All Books";
+}
+
+@model Book
+
+<h1>Zmień książke</h1>
+<a asp-action="Index" class="btn btn-secondary">Powrót</a>
+
+<form method="post">
+	<div class="form-group">
+		<label asp-for="Name"></label>
+		<input asp-for="Name" class="form-control" />
+		<span asp-validation-for="Name" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Genre"></label>
+		<select asp-for="GenreId" asp-items="ViewBag.Genre" class="form-control"></select>
+		<span asp-validation-for="GenreId" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Autor"></label>
+		<select asp-for="AutorId" asp-items="ViewBag.Autor" class="form-control"></select>
+		<span asp-validation-for="AutorId" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Description"></label>
+		<input asp-for="Description" class="form-control" />
+		<span asp-validation-for="Description" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Price"></label>
+		<input asp-for="Price" class="form-control" />
+		<span asp-validation-for="Price" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Zmień</button>
+</form>
